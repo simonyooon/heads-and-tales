@@ -1,0 +1,511 @@
+/*tangibility of interactivity, assets to personalize each story, 
+
+1 - bookshelf layout; book spine selection with book open
+2 - book covers upon tables - can design covers 
+  
+  book layout; image change upon scroll; left as illustration, right as scrolling text; give rotate indicator for mobile
+
+3 - Title "Tell me a story"; images of audio devices, toggle audio for written story
+4 -  file cabinets - can open to access stories
+*/
+
+/* Different text formatting for each story */
+
+/* potential color palette(?):
+#ecddae
+#c5ab9d
+#ab7878
+#55656b
+#5e4447
+*/
+
+html {
+  height: 100%;
+  background-color: #f3eede;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* margin: 5%; */
+  color: #86293c;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* h1 - Site title;
+h2 - Story/Page Title/Subtitle;
+h3 - Authors/Credits;
+h4 - sections/chapters */
+h1,
+h2 {
+  font-family: mr-darcy, sans-serif;
+}
+h3,
+h4 {
+  font-family: array-proportional, serif;
+}
+.story-title {
+  text-align: center;
+  margin: 150px;
+  font-size: 75px;
+}
+.stories {
+  font-size: 16px;
+  margin: 150px;
+  font-family: array-proportional, serif;
+}
+.author {
+  text-align: center;
+  font-size: 45px;
+}
+a {
+  text-align: center;
+}
+p {
+  text-align: justify;
+  text-indent: 10%;
+  line-height: 55px;
+}
+
+p1 {
+  text-align: center;
+  text-indent: 10%;
+  line-height: 55px;
+}
+
+img {
+  width: 35vw;
+  margin: 2vw;
+}
+iframe {
+  display: block;
+  margin: auto;
+  width: 90%;
+  /* Min and max height makes frame dynamic for desktop + mobile*/
+  min-height: 650px;
+  max-height: 720px;
+  /*border: none;*/
+}
+body,
+a:hover {
+  cursor: url(http://www.zingerbugimages.com/cursors/magicwand.ani),
+    url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/MagicWandCursor.gif?v=1655835973724),
+    progress !important;
+}
+body {
+  min-height: 100vh;
+  /*  background-color: #ddccba; */
+}
+
+#body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#body::-webkit-scrollbar {
+  display: none;
+}
+
+.engrave {
+  text-shadow: -1px -1px 1px #ffd975;
+  padding: 5vh;
+  text-align: center;
+}
+.title {
+  font-size: 50px;
+}
+.subtitle {
+  font-size: 20px;
+}
+.bookshelf {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  border: 35px #a87328 solid;
+  overflow: hidden;
+  background-image: linear-gradient(
+    #241909,
+    #2c1e0b 220px,
+    #b87e2c 220px,
+    #b87e2c 222px,
+    #a87328 222px,
+    #a87328 228px,
+    #986824 228px,
+    #986824 230px
+  );
+  background-size: 10px 230px;
+  /*  box-shadow: 0px 1000px 0px 400px #aaacb5; */
+  align-content: center;
+}
+.book {
+  height: 200px;
+  width: 40px;
+  float: left;
+  color: white;
+  font-size: 0.9em;
+  font-family: Verdana, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: transform 0.4s ease;
+}
+.book-tilted {
+  float: left;
+  width: 74px;
+}
+.book-tilted > .book {
+  transform: translateY(-3px) translateX(15px) rotate(9deg);
+}
+.book:hover {
+  transform: scale(1.05);
+}
+.book-tilted2 {
+  float: left;
+  width: 91px;
+}
+.book-tilted2 > .book {
+  transform: translateY(0px) translateX(24px) rotate(-15deg);
+}
+.book-tilted2 > .book:hover {
+  transform: scale(1.05);
+}
+.book h2 {
+  padding: 0;
+  font-size: 1em;
+  transform-origin: 0% 0%;
+  transform: rotate(0.25turn) translateY(-35px);
+  width: 170px;
+}
+.book h3 {
+  padding: 0;
+  font-size: 0.7em;
+  transform-origin: 0 0;
+  transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
+  width: 150px;
+}
+.book-null {
+  background-color: #000000;
+  border-left: 2px solid #4e3413;
+  border-right: 2px solid #4e3413;
+  color: black;
+}
+
+/*Nigel H. Ramdass
+
+Gautaman Asirwatham
+
+Amanda Blanca
+
+Nico Chiat
+
+Chris George
+
+Eugene Jeong
+
+Jiah Jin
+
+Matthew Leach
+
+Ruiqi Ma
+
+Fruie Macris
+
+Ananya Malagi
+
+Nyiesha Mallet
+
+Natalia Salas Porras
+
+Anahita Sukhija
+
+Orchid Sylvester
+
+Cesar Rodriguez
+
+Simon Yoon
+
+*/
+.center-img{
+
+  width:100%;
+}
+.book-ramdass {
+  background-size: 42px 210px;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/class%20book%20spine%20Completed.jpg?v=1655948528853);
+}
+.book-gaudi {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/gaudi.png?v=1656001350520);
+  height: 190px;
+  width: 76px;
+  transform: translateY(10px);
+}
+.book-amanda {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/AM%20Amanda%20FINAL.%20png.png?v=1655996937205);
+  background-size: 27px 200px;
+  background-repeat: no-repeat;
+  transform: rotate(-0.01turn) translateX(6px);
+}
+
+.book-tilted1 {
+  float: left;
+  width: 80px;
+}
+.book-tilted1 > .book {
+  transform: translateY(0px) translateX(24px) rotate(-15deg);
+}
+.book-tilted1 > .book:hover {
+  transform: scale(1.05);
+}
+.book-nico {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/Nico%20spine.jpg?v=1655948531122);
+  background-size: 42px 200px;
+  background-repeat: no-repeat;
+}
+.book-chris {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/chris.png?v=1656002245118);
+  width: 63px;
+  
+}
+#chris-font{
+  font-family: 'Merienda', cursive;
+}
+#chris1{
+  transform: translateX(20vw);
+}
+.book-eugene {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/RM%20Eugene.png?v=1655948531838);
+  background-size: 56px 200px;
+  background-repeat: no-repeat;
+  width: 56px;
+  transform: translateX(6px) rotate(-0.02turn);
+}
+.book-tilted2 {
+  float: left;
+  width: 80px;
+}
+.book-tilted2 > .book {
+  transform: translateY(0px) translateX(24px) rotate(-15deg);
+}
+.book-tilted2 > .book:hover {
+  transform: scale(1.05);
+}
+.book-jiah {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/RM%20Jiah%20ver1.png?v=1655948535219);
+  background-size: 53px 200px;
+  background-repeat: no-repeat;
+  transform: translateX(4px) rotate(0.02turn);
+}
+.book-tilted3 {
+  float: left;
+  width: 91px;
+}
+.book-tilted3 > .book {
+  transform: translateY(-1px) translateX(35px) rotate(15deg);
+}
+.book-tilted3 > .book:hover {
+  transform: scale(1.05);
+}
+.book-cesar {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/cesar%20final.jpeg?v=1655948530490);
+  background-size: 39px 200px;
+  background-repeat: no-repeat;
+  transform: rotate(-0.02turn) translateX(14px);
+}
+.cesar-img{
+  position: absolute;
+  
+}
+#cesar-1, #cesar-3, #cesar-5, #cesar-7, #cesar-9{
+  float: left;
+  scale: 67%;
+  transform: translateX(-50vw) rotateX(15deg);
+  opacity: 25%;
+  margin-bottom: 75px;
+}
+#cesar-2, #cesar-4, #cesar-6, #cesar-8{
+  float: right;
+  scale: 67%;
+  transform: translateX(55vw);
+  opacity: 25%;
+}
+.p-img-overlay {
+  position: relative;
+}
+.book-matthew {
+  transform: translateX(5px);
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/matthew.png?v=1656003684245);
+  width: 100px;
+}
+
+.book-ruiqi {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/ruiqi.png?v=1656003815194);
+  width: 50px;
+}
+.book-fruie {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/fruie.jpg?v=1656003923683);
+  transform: translateY(-10px);
+  width: 30px;
+  height: 210px;
+}
+#fruie-font {
+  font-family: "Sedgwick Ave Display", cursive;
+}
+.fruie-header {
+  font-family: "Rubik Beastly", cursive;
+}
+.book-ananya {
+  background-size: 40px 190px;
+  background-repeat: no-repeat;
+  transform: translateY(17px);
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/RM%20Ananya%20ver1.png?v=1655948535165);
+}
+.book-nyiesha {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/nyeisha.jpg?v=1656004395407);
+  width: 28px;
+  transform: rotate(-0.01turn);
+}
+#nyiesha-font{
+  font-family: 'Kaushan Script', cursive;
+}
+.nyiesha-img{
+  position: absolute;
+}
+#nyiesha-1, #nyiesha-3, #nyiesha-5, #nyiesha-7, #nyiesha-9{
+  float: left;
+  scale: 50%;
+  transform: translateX(-40vw);
+  opacity: 35%;
+}
+#nyiesha-2, #nyiesha-4, #nyiesha-6, #nyiesha-8{
+  float: right;
+  scale: 50%;
+  transform: translateX(40vw);
+  opacity: 35%;
+}
+.book-tilted4 {
+  float: left;
+  width: 80px;
+}
+.book-tilted4 > .book {
+  transform: translateY(-2px) translateX(24px) rotate(-15deg);
+}
+.book-tilted4 > .book:hover {
+  transform: scale(1.05);
+}
+.book-natalia {
+  height: 198px;
+  width: 25px;
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/natalia.png?v=1655747016773);
+  border-left: 2px solid #66320f;
+  border-right: 2px solid #422009;
+  transform: rotate(0.01turn) translateX(13px);
+}
+#nat1{
+  float: right;
+}
+#nat2{
+  float: right;
+}
+
+.book-anahita {
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/anahita.jpg?v=1656011122752);
+  background-size: 40px 200px;
+  background-repeat: no-repeat;
+  border-left: 2px solid #241909;
+  border-right: 2px solid #241909;
+  transform: translateX(17px);
+}
+#anahita4 {
+  width: 35vw;
+  float: left;
+}
+#anahita2 {
+  float: right;
+}
+#anahita3 {
+  float: left;
+}
+.book-orchid {
+  background-size: 27px 200px;
+  background-repeat: no-repeat;
+  transform: translateX(14px);
+  background-image: url(https://cdn.glitch.global/376583ef-ed88-4183-8d24-6748303feef8/CR%20Orchid%20Final.jpg?v=1655948532426);
+}
+#orchid1 {
+  float: left;
+}
+
+.book-tilted5 {
+  float: left;
+  width: 56px;
+}
+.book-tilted5 > .book {
+  transform: translateY(-2px) translateX(7px) rotate(-5deg);
+}
+.book-tilted5 > .book:hover {
+  transform: scale(1.05);
+}
+.book-simon {
+  background-image: url(https://cdn.glitch.global/5d650009-6f97-4d64-bc5c-d2dc6fde65e8/simonbook.jpg?v=1656004918666);
+  width: 39px;
+  transform: translateX(25px);
+}
+
+.book h2 {
+  padding: 0;
+  font-size: 1em;
+  transform-origin: 0% 0%;
+  transform: rotate(0.25turn) translateY(-35px);
+  width: 170px;
+}
+.book-natalia h2 {
+  padding: 0;
+  font-size: 1em;
+  transform-origin: 0% 0%;
+  transform: rotate(0.5turn) translateY(-35px);
+  width: 170px;
+}
+.book h3 {
+  padding: 0;
+  font-size: 0.7em;
+  transform-origin: 0 0;
+  transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
+  width: 150px;
+}
+
+.container {
+  background-color: $black;
+  line-height: 1.5;
+  margin: 1rem;
+  padding: 40px 25px;
+}
+a:hover {
+  text-decoration: none;
+}
+
+header,
+.demo,
+.demo p {
+  margin: 4em 0;
+  text-align: center;
+}
+
+abbr {
+  font-style: italic;
+  position: relative;
+}
+
+abbr:hover::after {
+  background: #241909;
+  border-radius: 4px;
+  bottom: 100%;
+  content: attr(title);
+  display: block;
+  left: 100%;
+  padding: 1em;
+  position: absolute;
+  width: 280px;
+  overflow: hidden;
+  transform: translateY(100px) translateX(100px);
+  z-index: 1;
+}
